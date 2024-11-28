@@ -1,0 +1,17 @@
+After loading the model if error occur on prediction
+
+model = tf.keras.models.load_model(model_path, compile=False)
+
+load the model without optimizer state
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+and then recompile the model
+
+
+
+
+In preprocessing notebook i have dataset on my local machine this is large dataset for just making a base model i take less images
+and preprocess images and converting images into the tensor and save the tensor in npz file and than upload npz file on drive to train the model on google colab notebook for better computational power.
+
+For testing on video we have to extract the frames from the video and pass to model after preprocessing 
